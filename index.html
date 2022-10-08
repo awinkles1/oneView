@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Assets/CSS/JS.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+  </script>
+  <title>Group Project</title>
+</head>
+
+
+
+
+<body>
+  <!--these are the buttons at the top of the page-->
+  <div class="main">
+    <h2 id="heading"><img src="Assets/images/ovf1.webp" id="oneView">
+    </h2>
+    <section id="navButtons" class="btn-group">
+      <div id="goHome">
+        <button class="btn btn-info btn-lg" id="goHomeButton">Account</button>
+      </div>
+      <div id="logOut">
+        <button class="btn btn-info btn-lg" id="logOutButton">Log Out</button>
+      </div>
+      <!-- Trigger the modal with a button -->
+      <div>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#changePassWordModal"
+          id="changePassWordButton">Change Password</button>
+      </div>
+      <div>
+        <!-- Trigger the modal with a button -->
+        <button id="messageButton" class="btn btn-info btn-lg" type="button" data-toggle="modal"
+          data-target="#messageModal">Messages <span id="notification" class="badge"></span></button>
+        <span id="notification" class="badge"></span>
+      </div>
+    </section>
+    <br>
+    <!--This is the code for page one-->
+    <!--this is the login page-->
+
+
+    <div class="bg-img" id="loginPage">
+      <div>
+        <span id='greeting'>Welcome to<br> METRO REENTRY <br>Services</span>
+      </div>
+      <div>
+        <form action="/action_page.php" class="container" id="page1">
+          <h1>Login</h1>
+
+          <label for="user"><b>Identification Number</b></label>
+          <input type="text" placeholder="Enter GDC Number" name="user" id="user" required>
+
+          <label for="pw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="pw" id="pw" required>
+
+          <button type="button" class="btn" id="login">Login</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--this is the end of the login page-->
+
+  <!--This is the code for the account of the app-->
+  <div id="accountPage">
+    <div id="accountInfo">
+      <!--this is the grid with the panels-->
+      <button id="budget">BUDGET</button>
+      <button id="store">COMMISSARY</button>
+      <button id=profile>PROGRAMS</button>
+      <button id="medical">MEDICAL</button>
+    </div>
+    <!--modal that opens up messages-->
+    <div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="messageModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Messages</h4>
+            </div>
+            <div class="modal-body">
+              <ul id="savedMessages">
+
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button id="clearMessages" type="button" class="btn btn-default" data-dismiss="modal">Clear
+                Messages</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- change passwordModal -->
+    <div class="modal fade" id="changePassWordModal" role="dialog">
+      <div class="modal-dialog">
+        <div id="modalIntro">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Change Password</h4>
+            </div>
+            <div class="modal-body">
+              <label>Enter your new Password</label>
+              <input type="password" id="pwChange">
+              <label>Confirm your new Password</label>
+              <input type="password" id="pwConfirm">
+            </div>
+            <div class="modal-footer">
+              <button id="savePassWord" type="button" class="btn btn-default" data-dismiss="modal">Save new
+                Password</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--this is the end of the account page-->
+
+    <br>
+
+    <!--this will appear on each page within the account-->
+    <p id="introInfo">"Please enter your GDC number and your password to gain access to the services provided at Metro Reentry Facility. All request will be responed to within 5 business days."</p>
+
+    <!--beginning of medical intro-->
+
+    <div id="medicalMenu">
+      <h2 id="userMedicalInfo"></h2>
+
+      <section id="medicalFlex">
+        <ul id="medicalConfirmation"></ul>
+        <label id="medReq">What type of request are you making?</label>
+        <select id="medicalChoice">
+          <option id="doctorRequest">I need to see the doctor</option>
+          <option id="dentistRequest">I need to see the dentist</option>
+          <option id="medicationRequest">I need my medication refilled</option>
+        </select>
+        <button id="medicalChoiceSubmit" type="button"><b>Submit</b></button>
+      </section>
+    </div>
+
+    <!--end of medical intro-->
+    <!--these are the pages that react to the dropdown menu above-->
+    <div id="doctorDentist">
+      <h2 id="doctorDentist2">Please leave a description of your symptoms or the meds you need refilled.</h2>
+      <div id="doctorDentist1">
+        <textarea id="doctorDentistText"></textarea>
+      </div>
+      <div id="doctorDentist3">
+        <button id="submitMedical" type="button"><b>Submit Request</b></button>
+      </div>
+    </div>
+
+    <!--commisary main page-->
+    <div id="storePage">
+
+      <!-- <button id="updateStore">Update Store</button> -->
+      <section id="storeContainer">
+        <section id="storeBox" class="stroegrid">
+
+          <h4><b>Hygiene</b></h4>
+          <ul id="hygiene">
+
+          </ul>
+          <h4><b>Over the Counter</b></h4>
+          <ul id="otc">
+
+          </ul>
+          <h4><b>Drinks</b></h4>
+          <ul id="drinks">
+
+          </ul>
+          <h4><b>Soups</b></h4>
+          <ul id="soup">
+
+          </ul>
+          <h4><b>Pastry</b></h4>
+          <ul id="pastry">
+
+          </ul>
+          <h4><b>Chips</b></h4>
+          <ul id="chips">
+
+          </ul>
+          <div id="storeBtnPosition">
+            <button type="button" id="storePurchase" class="btn btn-lg btn-primary">Submit Order</button>
+          </div>
+        </section>
+        <section id="storeBox2">
+
+          <h1 id="accountBalance"></h1>
+          <p id="storeConfirm"></p>
+        </section>
+      </section>
+
+    </div>
+    <!--end of commisary main page-->
+
+    <!--this is the start of the budget page-->
+    <p id="budgetIntro">Welcome to OneView Budgeting</p>
+    <section id="gridContainer">
+
+      <div id=flex>
+        <section id="containBox" class="grid-item item3">
+          <span>
+            <label for="income" class="w">Income:</label>
+            <input type="number" id="income" class="a"><br>
+          </span>
+          <span>
+            <label for="leisure" class="w">Leisure:</label>
+            <input type='number' id="leisure" class="a"><br>
+          </span>
+          <span>
+            <label for="commisary" class="w">Commissary:</label>
+            <input type='number' id="commisary" class="a"><br>
+          </span>
+          <span>
+            <label for="media" class="w">Media:</label>
+            <input type='number' id="media" class="a"><br>
+          </span>
+          <span>
+            <label for="debt" class="w">Debt:</label>
+            <input type='number' id="debt" class="a"><br>
+          </span>
+          <span>
+            <label for="savings" class="w">Savings:</label>
+            <input type='number' id="savings" class="a"><br>
+          </span>
+          <section id="budBtn">
+            <button id="calculate" type="button" class="btn">Calculate</button>
+            <button id="quickBudget" type="button" class="btn">Quick Budget</button>
+            <button id="saveBudget" type="button" class="btn">Save Budget</button>
+          </section>
+        </section>
+
+        <div id=advice class="grid-item ">
+          <h3 id="l"><i><u>oneView</i> Budget Suggestions:</u></h3>
+          <span id="b"></span><br><br>
+          <span id="e"></span><br><br>
+          <span id="d"></span><br><br>
+          <span id="s"></span>
+        </div>
+
+      </div>
+
+
+
+    </section>
+    <!--this is the end of the budget page-->
+    <div id="programPage">
+      <div id="progRow1">
+        <div id="ojt">
+          <h2 class="proHead">OJT Opportunities</h2>
+
+          <label for="barber" id="barberLabel" class="custCheck"><input type="checkbox" id="barber" name="barber"><span
+              class="checkmark"></span>Barber</label>
+
+          <label for="laundry" id="laundryLabel" class="custCheck"><input type="checkbox" id="laundry"
+              name="laundry"><span class="checkmark"></span>Laundry</label>
+
+          <label for="bMaint" id="bMaintLabel" class="custCheck"><input type="checkbox" id="bMaint" name="bMaint"><span
+              class="checkmark"></span>Building Maintenance</label>
+
+          <label for="cMaint" id="cMaintLabel" class="custCheck"> <input type="checkbox" id="cMaint" name="cMaint"><span
+              class="checkmark"></span>Custodial Maintenance</label>
+
+          <label for="pPass" id="pPassLabel" class="custCheck"><input type="checkbox" id="pPass" name="pPass"><span
+              class="checkmark"></span>Peach Pass Program</label>
+
+          <label for="doggy" id="doggyLabel" class="custCheck"><input type="checkbox" id="doggy" name="doggy"><span
+              class="checkmark"></span>Dog Program</label>
+
+          <label for="foody" id="foodyLabel" class="custCheck"><input type="checkbox" id="foody" name="foody"><span
+              class="checkmark"></span>Food Services</label>
+        </div>
+        <div id="education">
+          <h2 class="proHead">Education Opportunites</h2>
+
+          <label for="cGood" id="cGoodLabel" class="custCheck"><input type="checkbox" id="cGood" name="cGood"><span
+              class="checkmark"></span>Common Good</label>
+
+          <label for="ashU" id="ashULabel" class="custCheck"><input type="checkbox" id="ashU" name="ashU"><span
+              class="checkmark"></span>Ashland University</label>
+
+          <label for="gedAbe" id="gedAbeLabel" class="custCheck"><input type="checkbox" id="gedAbe" name="gedAbe"><span
+              class="checkmark"></span>GED/ABE</label>
+        </div>
+        <div id="vocational">
+          <h2 class="proHead">Vocational Opportunities</h2>
+
+          <label for="weld" id="weldLabel" class="custCheck"><input type="checkbox" id="weld" name="weld"><span
+              class="checkmark"></span>Welding</label>
+
+          <label for="eTruck" id="eTruckLabel" class="custCheck"><input type="checkbox" id="eTruck" name="eTruck"><span
+              class="checkmark"></span>Electric Truck</label>
+
+          <label for="persCode" id="persCodeLabel" class="custCheck"><input type="checkbox" id="persCode"
+              name="persCode"><span class="checkmark"></span>Persevere Coding Camp</label>
+        </div>
+      </div>
+      <div id="progRow2">
+        <div id="enrichment">
+          <h2 class="proHead">Self Enrichment Opportunites</h2>
+
+          <label for="tyro" id="tyroLabel" class="custCheck"><input type="checkbox" id="tyro" name="tyro"><span
+              class="checkmark"></span>Tyro</label>
+
+          <label for="tyroLead" id="tyroLeadLabel" class="custCheck"><input type="checkbox" id="tyroLead"
+              name="tyroLead"><span class="checkmark"></span>Tyro Leadership</label>
+
+          <label for="celeRecov" id="celeRecovLabel" class="custCheck"><input type="checkbox" id="celeRecov"
+              name="celeRecov"><span class="checkmark"></span>Celebrate Recovery</label>
+        </div>
+        <div id="housing">
+          <h2 class="proHead">Housing & Job Opportunities</h2>
+
+          <label for="tyroH" id="tyroHLabel" class="custCheck"><input type="checkbox" id="tyroH" name="tyroH"><span
+              class="checkmark"></span>Tyro</label>
+
+          <label for="uLeague" id="uleagueLabel" class="custCheck"><input type="checkbox" id="uLeague"
+              name="uLeague"><span class="checkmark"></span>Urban League</label>
+
+          <label for="aces" id="acesLabel" class="custCheck"><input type="checkbox" id="aces" name="aces"><span
+              class="checkmark"></span>Aces</label>
+        </div>
+        <div id="finance">
+          <h2 class="proHead">Finance</h2>
+
+          <label for="regents" id="regentsLabel" class="custCheck"><input type="checkbox" id="regents"
+              name="regents"><span class="checkmark"></span>Regions Bank Program</label>
+
+          <label for="finLit" id="finLitLabel" class="custCheck"><input type="checkbox" id="finLit" name="finLit"><span
+              class="checkmark"></span>Financial Literacy</label>
+        </div>
+      </div>
+      <div id="proSub">
+        <button type="button" id="programSubmit" class="btn btn-lg btn-info">Submit</button>
+      </div>
+    </div>
+
+
+</body>
+<script src="Assets/JS/JS.js"></script>
+<script src="Assets/JS/store.js"></script>
+<script src="Assets/JS/budget.js"></script>
+<script src="Assets/JS/programs.js"></script>
+
+</html>

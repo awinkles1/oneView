@@ -1,0 +1,167 @@
+#body {
+    
+    background: linear-gradient(white, lightgrey,silver,white);
+    height:100vh;
+    font-family: 'Times New Roman', Times, serif;
+  
+}
+main {
+    width: 100%;
+    margin:2% auto;
+    text-align: center;
+}
+#top{
+    font-size: 75%;
+   
+}
+.border {
+    border-style: inset;
+    border-color: #6dc3ff91;
+    border-width: 3px;
+    border-radius: 5px;
+    padding: 1%;
+   
+    color:#0e0e0e;
+ 
+}
+#introduction {
+    text-decoration: underline;
+    width: 60%;
+    margin: 7px auto 7px auto;
+    font-size: 275%;
+    background-color: #3797ca18;
+    font-weight: bold;
+    border-style: groove;
+    text-shadow: 15px 25px 5px grey;
+}
+#directions {
+    width: 80%;
+    margin:3% auto;
+    font-size: 150%;
+    margin-top:20%;
+    background-color: #72c9f73f;
+}
+.arrow{
+    cursor:pointer;
+}
+#quizData {
+    display:flex;
+    flex-direction: row;
+    font-size: 1.5em;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+#javaQuestion {
+    width: 75%;
+    margin:3% auto;
+    color:rgb(0, 0, 0);
+}
+#timer, #progress {
+    width:10%;    
+    padding: 1%;
+    background-color: white;
+    color: black;
+    border-color:rgb(51, 132, 207) ;
+}
+#posAns {
+    width:60%;
+    margin:auto;
+    background-color: #72c9f73f;
+    margin-bottom:3%;
+}
+#radioLabel {
+    margin:auto;
+    padding-left:40%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+#winner {
+    margin:auto;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+    padding-left:1%;
+    width: 80%;
+}
+h2 {
+    margin: auto;
+    text-align: left;
+    width:20%;
+}
+li {
+    margin: auto;
+    text-align: left;
+    list-style: none;
+    width: 20%;
+}
+
+#scoreOutput {
+    width: 80%;
+    margin:3% auto;
+    font-size: 150%;
+    
+}
+.finals{
+    margin: 0 0 10px;
+}
+
+#scoreData {
+    margin:auto;
+    width: 75%;
+    padding: 4%;
+    text-align: center;
+    background-color: #72c9f73f;
+}
+
+
+
+
+button:active {
+    transform: translateY(4px);
+  }
+
+@media  screen and (max-width: 425px){
+    #introduction{
+        width: 90%;
+    }
+    #directions {
+        width: 80%;
+    }
+    #radioLabel {
+        padding-left: 30%;
+    }
+    #winner {
+        font-size: 1em;
+    }
+    #timer,#progress {
+        width: 20%;
+    }
+    #scoreData {
+        width: 80%;
+    }
+    #posAns {
+        width: 80%;
+    }
+}
+#beginQuiz{
+    padding: 15px 50px 15px 50px;
+   
+    border-color: #ffffff;
+}
+#submit{
+    padding: 15px 50px 15px 50px;
+    border-color: #ffffff;
+}
+#button{
+    text-align: center;
+}
+#takeAgain{
+    padding: 15px 50px 15px 50px;
+    border-color: #ffffff;
+}
+#submitProg{
+    padding: 15px 50px 15px 50px;
+    border-color: #ffffff;
+}

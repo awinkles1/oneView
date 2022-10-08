@@ -1,0 +1,733 @@
+
+body, html {
+    height: 100vh;
+    width:100vw;
+    margin:auto;
+    font-family: Arial, Helvetica, sans-serif;
+     background:linear-gradient(white, lightgrey,silver,white);
+  }
+.main {
+  padding: 0px 10px;
+  font-family:'Times New Roman', Times, serif;
+}
+
+/*//////////////////Page1 styling begins here////////////////////////*/
+    /*this keeps confines the input boxes to the white container*/
+  * {
+    box-sizing: border-box;
+  }
+  
+  .bg-img {
+    /* The image used */
+    background:linear-gradient(lightblue,grey);
+    min-height: 500px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Add styles to the form container */
+  .container {
+    float:left;
+    position: absolute;
+    right: 50px;
+    margin:20px;
+    max-width: 40vw;
+    padding: 16px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit button */
+ #login {
+    background-color:rgb(76, 130, 151);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    margin-bottom:3%;
+  }
+  
+  #login:hover {
+    opacity: 1;
+  } 
+
+  /*this is code for the module*/
+  .form-horizontal {
+    margin: 10%;
+    padding: 16px;
+  }
+
+  .container_row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+  }
+ 
+  #greeting{
+    float:left;
+    font-size:400%;
+    padding:5% 0% 0% 7%;
+    margin-right:45%;
+    text-shadow:15px 25px 25px black;
+  }
+#loginPage{
+  display:grid;
+  grid-template-columns: auto auto;
+  border-style:inset;
+}
+/*//////////////////Page 2 styling begins here////////////////////////*/
+
+#introInfo{
+  width: 70%;
+  text-align: center;
+  font-size: 1.5em;
+  font-style: italic;
+  margin: auto;
+  
+  padding: 2%;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+/*submit button quiz page*/
+#proSub{
+  display: flex;
+  justify-content: center;
+  padding-top: 3%;
+}
+
+
+.main h2{
+    text-align: center;
+    font-size: 300%;
+    text-shadow: 15px 5px 5px skyblue;
+}
+#accountInfo{
+    display:grid;
+    text-align: center;
+    background:linear-gradient(white, lightgrey,silver,white);
+    padding:5%;
+    margin-top:2%;
+    align-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 7vw 7vw 7vw;
+    grid-gap:5%;
+    border-style:inset;
+}
+#changePassWord {
+  bottom: 0px;
+}
+#introInfo{
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+}
+#medical{
+  font-family:'Times New Roman', Times, serif;
+    grid-column:1/ span 1;
+    grid-row:1/span 3;
+    opacity:.4; 
+    background-image:url("../images/medicalPic.jpg");
+    background-size:cover; 
+    padding-top:20%; 
+    font-size:100%;
+    color:grey;
+}
+
+#medical:hover{
+  opacity:1;
+  transition:1s;
+  font-Size:350%;
+  font-weight: 900;
+  color:cornflowerblue;
+}
+#medicalChoiceSubmit{
+background-color:steelblue;
+color:whitesmoke;
+border:none;
+border-radius: 10%;;
+}
+#medicalChoiceSubmit b {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#medicalChoiceSubmit b:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+#medicalChoiceSubmit:hover b {
+  padding-right: 10px;
+}
+
+#medicalChoiceSubmit:hover b:after {
+  opacity: 1;
+  right: 0;
+}
+/*//////////////////////////////////////////*/
+#userMedicalInfo{
+  border-style:groove;
+  padding:2%;
+  font-family:'Times New Roman', Times, serif;
+  background:url(../images/sciencePic.jpg);
+  background-size:65vw;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y:20%;
+  opacity:0.8;
+}
+#medReq{
+  font-family:'Times New Roman', Times, serif;
+  padding-top:10%;
+  font-size:1.5em;
+ 
+}
+#medicalFlex{
+   border-style:inset;
+   min-height: 150px;
+   text-align: center;
+   padding-top:3%;
+   background-size: cover;
+}
+ #doctorDentistText{
+    resize:none;
+    width:80%;
+    height:150px;
+  }
+#doctorDentist2{
+  font-family:'Times New Roman', Times, serif;
+  border-style:groove;
+  padding: 2%;
+  text-align: center;
+}
+#doctorDentist3{
+  display:flex;
+  justify-content: center;
+  padding-top:3%;
+}
+ #doctorDentist1{
+    display:flex;
+    justify-content: center;
+  }
+#submitMedical{
+  background-color:steelblue;
+  color:whitesmoke;
+  border:none;
+  border-radius: 10%;
+  }
+  #submitMedical b {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  #submitMedical b:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+  }
+  #submitMedical:hover b {
+    padding-right: 10px;
+  }
+  
+  #submitMedical:hover b:after {
+    opacity: 1;
+    right: 0;
+  }
+ 
+ 
+#store{
+  font-family:'Times New Roman', Times, serif;
+    background:lightblue; 
+    grid-column:2/ span 1;
+    grid-row:1/ span 3;
+    opacity:.4;
+    background-image:url("../images/foodPic.jpg");
+    background-size:cover;
+    padding-top:20%;
+    font-size:100%;
+    color:grey;
+}
+
+#store:hover{
+  opacity:1;
+  transition:1s;
+  padding-top:20%;
+  font-Size:360%;
+  font-weight: 850;
+  color:cornflowerblue;
+ 
+}
+#storePage{
+  background:linear-gradient(lightgrey,silver,lightblue)
+}
+#storeContainer{
+  display:flex;
+  padding-left:2.5%;
+  padding-bottom:2.5%;
+}
+#storeConfirm{
+  font-weight:900;
+  color:red;
+  font-size: 1.5em;
+  background:linear-gradient(rgba(226, 206, 206, 0.171),white,rgba(226, 206, 206, 0.171));
+}
+#accountBalance{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  border-style:groove;
+  font-size: 100%;
+  text-align: center;
+  padding:3%;
+  width:100%;
+  font-size: 2.5em;
+  margin-bottom: 10%;
+
+}
+#storeBox{
+  font-family: 'Times New Roman', Times, serif;
+  border-style:inset;
+  padding:0% 2% 2% 2%;
+  margin-right:2%;
+  min-width:350px;
+}
+
+#accountPage{
+  height:80vh;
+}
+#storeBox2{
+  float:right;
+  width:100%;
+  padding-left:2%;
+  padding-right:2%;
+  background:url("../images/foodcookie.jpg");
+  background-size:cover;
+  margin-right: 3%;
+}
+#storePurchase{
+background-color:rgb(36, 119, 187); /* Green background */
+border: 1px solid darkgrey; /* Green border */
+color: whitesmoke; /* White text */
+padding: 10px 20px; /* Some padding */
+cursor: pointer; /* Pointer/hand icon */
+}
+#storePurchase:hover{
+  opacity:0.8;
+}
+#storeBtnPosition{
+text-align: center;
+padding-top:2%;
+padding-bottom:2%;
+border-style:groove;
+}
+#profile{
+  font-family:'Times New Roman', Times, serif;
+    background:lightblue;
+    grid-column:3/ span 1;
+    grid-row:1/ span 3;
+    opacity:.4;
+    background-image:url("../images/picture.jpg");
+    background-size:cover;
+    padding-top:20%;
+    font-size:100%;
+    color:grey;
+}  
+#strBalance{
+  
+  font-weight: 500;
+}
+
+#profile:hover{
+  opacity:1;
+  padding-top:20%;
+  transition:1s;
+  font-Size:350%;
+  font-weight: 900;
+  color:cornflowerblue;
+}
+#budget{
+  font-family:'Times New Roman', Times, serif;
+    background:lightblue;
+    grid-column:4/ span 1;
+    grid-row:1/ span 3;
+    opacity:.4;
+    background-image:url("../images/shoppingPic.jpg");
+    background-size:100%;
+    padding-top:20%;
+    font-size:100%;
+    color:grey;
+}  
+
+#budget:hover{
+    opacity: 1;
+    transition:1s;
+    padding-top:20%;
+    font-Size:350%;
+    font-weight: 900;
+    color:cornflowerblue;
+}
+#changePW{
+ padding: 15px 25px;
+ font-size: 24px;
+ text-align: center;
+ cursor: pointer;
+ outline: none;
+ color: #fff;
+ background-color:rgb(76, 130, 151);
+ border-radius: 15px;
+ box-shadow: 0 9px #999;   
+ color: white;
+ padding: 16px 20px;
+ cursor: pointer;
+ width: 30%;
+ opacity: 0.9;
+ margin-left:35%;
+      }
+ #changePW:active {
+  background-color: skyblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+      }
+#changePW:hover{
+ background-color:rgb(76, 130, 151);
+ opacity:0.8;
+}
+
+/*this is the start of the budgeting styling*/
+
+.a{
+  float:right;
+  max-width:20%;
+}
+.w{
+  float:left;
+
+}
+/*this moves the budget buttons to the right of the graph*/
+#flex{
+  display:flex;
+ 
+}
+#budBtn{
+ /* display:grid;
+ grid-template-rows: 50px 50px 50px;
+ width:450px;
+ row-gap: 5px; */
+ display: inline;
+ position: relative;
+ margin:auto;
+
+}
+#calculate{
+  background-color:steelblue; /* blue background */
+  border: 1px solid darkgrey; /* Grey border */
+  color: whitesmoke; /* White text */
+  cursor: pointer; /* Pointer/hand icon */
+}
+#calculate:hover{
+  opacity: 0.8;
+}
+#saveBudget{
+  opacity:1;
+  background-color:steelblue; /* blue background */
+  border: 1px solid darkgrey; /* Grey border */
+  color: whitesmoke; /* White text */
+  cursor: pointer; /* Pointer/hand icon */
+}
+#saveBudget:hover{
+  opacity: 0.8;
+}
+#quickBudget{
+  opacity: 1;
+  background-color:steelblue; /* blue background */
+  border: 1px solid darkgrey; /* Grey border */
+  color: whitesmoke; /* White text */
+  cursor: pointer; /* Pointer/hand icon */
+}
+#quickBudget:hover{
+  opacity: 0.8;
+}
+#containBox{
+  font-family:'Times New Roman', Times, serif;
+  display:grid;
+  background:linear-gradient(rgb(206, 202, 202),rgb(182,218,229));
+  border-style:inset;
+  min-width:450px;
+  max-width:450px;
+  max-height: 400px;
+  font-size:20px;
+  padding:3% 3% 0% 3%;
+  margin-bottom:20px;
+}
+#advice{
+  font-family:'Times New Roman', Times, serif;
+  padding:0% 0% 0% 2%;
+ 
+  font-size:1.5em;
+  color:mediumblue;
+  max-height:500px;
+  font-weight:700;
+  width: 40%;
+}
+#l{
+  font-size:150%;
+  color:black;
+  font-weight: 300;
+  padding-left:5%;
+  width:150%;
+}
+#navButtons{
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  background-color:rgb(228, 226, 226);
+  justify-content:space-evenly;
+  padding:1.5%;
+  border-style:inset;
+}
+.noticeBackground{
+  background: red;
+  color:white;
+}
+#budgetIntro {
+  text-align: center;
+  font-size: 1.5em;
+}
+#gridContainer {
+  display: grid;
+  gap: 5px;
+  height:80vh;
+  background:linear-gradient(lightgrey,silver,lightblue);
+  padding-left:5%;
+} 
+/* #advice{
+  background:transparent;
+  max-width:70%;
+  padding-left:3%;
+} */
+.item1{
+  font-family:'Times New Roman', Times, serif;
+  font-size:225%;
+  font-weight: 900;
+  text-align:center;
+  padding-top:1%;
+}
+
+.btn-group button {
+  background-color:steelblue; /* Green background */
+  border: 1px solid darkgrey; /* Green border */
+  color: whitesmoke; /* White text */
+  padding: 10px 20px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+}
+
+#messageButton{
+  padding-left:45px;
+  padding-right:45px;
+ 
+}
+#goHomeButton{
+  padding-left:50px;
+  padding-right:50px;
+
+}
+#logOutButton{
+  padding-left:50px;
+  padding-right:50px;
+ 
+}
+/*start of program styling*/
+#progRow1{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 20px;
+  border-style: groove;
+  margin-top: 1%;
+}
+#progRow2 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 20px;
+  border-style: groove;
+}
+#barberLabel:hover, #laundryLabel:hover, #bMaintLabel:hover, #cMaintLabel:hover, #pPassLabel:hover, #doggyLabel:hover, #foodyLabel:hover,    #cGoodLabel:hover, #ashULabel:hover, #gedAbeLabel:hover, #eTruckLabel:hover, #weldLabel:hover, #persCodeLabel:hover, #tyroLabel:hover, #tyroLeadLabel:hover, #celeRecovLabel:hover, #tyroHLabel:hover, #uleagueLabel:hover, #acesLabel:hover, #regentsLabel:hover, #finLitLabel:hover{
+  background-color: #abc7dd;
+}
+#ojt {
+  border-style: inset;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  background-image: url("../images/skyscraper.jpg");
+  opacity:.4;
+  background-size:100%;
+ }
+ #ojt:hover, #education:hover,#vocational:hover,#enrichment:hover,#housing:hover,#finance:hover{
+   opacity: 1;
+   color: white;
+ }
+#education{
+  border-style: inset;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/books.jpg");
+  opacity:.4;
+  background-size: 100%;
+}
+
+#vocational {
+  border-style: inset;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  background-image: url("../images/js.png");
+  background-size: 100%;
+  opacity: .4;
+}
+
+
+#enrichment {
+  border-style: inset;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  background-image: url("../images/bub1.jpg");
+  opacity: .4;
+  background-size: 100%;
+}
+#housing {
+  border-style: inset;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  background-image: url("../images/bub4.jpg");
+  opacity: .4;
+  background-size: 100%;
+}
+#finance {
+  border-style: inset;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  background-image: url("../images/bub3.jpg");
+  opacity: .4;
+  background-size: 100%;
+}
+.proHead{
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+}
+/* Customize the label (the container) */
+.custCheck{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.custCheck input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+ 
+}
+
+/* On mouse-over, add a grey background color */
+.custCheck:hover input ~ .checkmark {
+  background-color: #abc7dd;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custCheck input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custCheck input:checked ~ .checkmark:after {
+  display: block;
+  
+}
+
+/* Style the checkmark/indicator */
+.custCheck .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+@media only screen and (max-width: 750px) {
+  #navButtons{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    background-color:rgb(228, 226, 226);
+    justify-content:space-between;
+    align-content: space-around;
+    padding:1.5%;
+    border-style:inset;
+    margin:auto;
+  }
+}
+
+
+
+ 
